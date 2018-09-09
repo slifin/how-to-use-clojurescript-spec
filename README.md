@@ -32,6 +32,8 @@ At the end of the process you should have something similar to this in your proj
                [org.clojure/test.check "0.10.0-alpha3"]]
 ```
 
+Run ```lein fighwheel``` in the terminal to see the result of the work in realtime
+
 Open ```spec-test/src/spec_test/core.cljs``` in a text editor
 
 Add the spec library by changing the first declaration from
@@ -73,3 +75,5 @@ Run the function call:
 ```
 (foo "hey")
 ```
+
+If everything has worked there will be an uncaught exception in the browser developer console
