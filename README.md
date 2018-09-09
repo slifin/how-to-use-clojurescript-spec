@@ -32,4 +32,19 @@ At the end of the process you should have something similar to this in your proj
                [org.clojure/test.check "0.10.0-alpha3"]]
 ```
 
+Open ```spec-test/src/spec_test/core.cljs``` in a text editor
+
+Add the spec library by changing the first declaration from
+
+```
+(ns spec-test.core
+    (:require ))
+```
+
+to 
+```
+(ns spec-test.core
+    (:require [clojure.spec.alpha :as spec]
+    	[clojure.spec.test.alpha :as test]))
+```
   
