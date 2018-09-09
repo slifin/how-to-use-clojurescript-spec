@@ -77,3 +77,8 @@ Run the function call:
 ```
 
 If everything has worked there will be an uncaught exception in the browser developer console
+
+```
+Call to #'spec-test.core/foo did not conform to spec:
+In: [0] val: "hey" fails at: [:args :x] predicate: number?
+```
