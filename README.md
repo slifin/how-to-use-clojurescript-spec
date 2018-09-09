@@ -15,19 +15,21 @@ Run ```lein new figwheel spec-test```
 
 Open ```spec-test/project.cljs``` in a text editor
 
-Navigate to https://github.com/clojure/spec.alpha and copy the "Leiningen dependency information:" section
+Navigate to https://github.com/clojure/spec.alpha 
+
+Copy the "Leiningen dependency information:" section
 and add the information to your dependencies list in project.cljs
 
 Repeat the process with https://github.com/clojure/test.check
 
-You should have something similar to this in your project.cljs
+At the end of the process you should have something similar to this in your project.cljs
 
 ```
-  :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.238"]
-                 [org.clojure/core.async  "0.4.474"]
-                 [org.clojure/spec.alpha "0.2.176"]
-                 [org.clojure/test.check "0.10.0-alpha3"]]
+:dependencies [[org.clojure/clojure "1.9.0"]
+               [org.clojure/clojurescript "1.10.238"]
+               [org.clojure/core.async  "0.4.474"]
+               [org.clojure/spec.alpha "0.2.176"]
+               [org.clojure/test.check "0.10.0-alpha3"]]
 ```
 
   
