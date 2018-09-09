@@ -82,3 +82,13 @@ If everything has worked there will be an uncaught exception in the browser deve
 Call to #'spec-test.core/foo did not conform to spec:
 In: [0] val: "hey" fails at: [:args :x] predicate: number?
 ```
+
+
+## Notes
+
+```(test/instrument)``` Is not magic, it will not check data that has been spec'd
+unless it passes through a function that does have a spec, it is context sensitive
+it will not be able to validate functions that have yet to be defined or do not yet
+have specifications in the chronology of the program
+
+Function calls need to happen after ```(test/instrument)``` to be checked
