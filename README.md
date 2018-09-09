@@ -40,11 +40,36 @@ Add the spec library by changing the first declaration from
 (ns spec-test.core
     (:require ))
 ```
-
 to 
 ```
 (ns spec-test.core
     (:require [clojure.spec.alpha :as spec]
     	[clojure.spec.test.alpha :as test]))
 ```
-  
+
+Delete everything else in the file
+
+Create a new function 
+
+```
+(defn foo [x]
+  (inc x))
+```
+
+Create a spec for the function 
+```
+(spec/fdef foo
+  :args (spec/cat :x number?)
+  :ret number?)
+```
+
+Tell Clojurescript to replace all function calls after this point with calls that 
+check the inputs to the function first with specs.
+```
+(test/instrument)
+```
+
+Run the function call:
+```
+(foo "hey")
+```
